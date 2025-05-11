@@ -2,6 +2,7 @@ package com.laigeoffer.pmhub.base.notice.domain.dto;
 
 import com.laigeoffer.pmhub.base.notice.domain.entity.WxMessage;
 import lombok.Data;
+import lombok.EqualsAndHashCode;
 
 /**
  * 微信提醒消息模板
@@ -9,6 +10,7 @@ import lombok.Data;
  * @author canghe
  */
 @Data
+@EqualsAndHashCode(callSuper = false)
 public class ProcessWxMessageDTO extends WxMessage {
 
     /**

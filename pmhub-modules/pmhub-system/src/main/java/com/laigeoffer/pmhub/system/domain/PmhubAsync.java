@@ -9,6 +9,7 @@ import com.laigeoffer.pmhub.base.core.annotation.Excel;
 import com.laigeoffer.pmhub.base.core.annotation.Excel.ColumnType;
 import com.laigeoffer.pmhub.base.core.core.domain.BaseEntity;
 import lombok.Data;
+import lombok.EqualsAndHashCode;
 
 import java.math.BigDecimal;
 import java.util.Date;
@@ -18,6 +19,7 @@ import java.util.Date;
  *
  * @author canghe
  */
+@EqualsAndHashCode(callSuper = true)
 @Data
 public class PmhubAsync extends BaseEntity {
     private static final long serialVersionUID = 1L;

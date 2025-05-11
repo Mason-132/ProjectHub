@@ -94,7 +94,6 @@
 <!--            <groupId>com.laigeoffer.pmhub-cloud</groupId>-->
 <!--            <artifactId>pmhub-base-notice</artifactId>-->
 <!--        </dependency>-->
-
     </dependencies>
 
     <build>

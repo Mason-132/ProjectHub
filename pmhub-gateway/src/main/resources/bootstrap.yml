@@ -14,12 +14,12 @@ spring:
     nacos:
       discovery:
         # 服务注册地址
-        server-addr: 127.0.0.1:8848
+        server-addr: 192.168.142.128:8848
         username: nacos
         password: nacos
       config:
         # 配置中心地址
-        server-addr: 127.0.0.1:8848
+        server-addr: 192.168.142.128:8848
         username: nacos
         password: nacos
         # 配置文件格式
@@ -32,14 +32,14 @@ spring:
       eager: true
       transport:
         # 配置控制台服务地址
-        dashboard: 127.0.0.1:8080
+        dashboard: 192.168.142.128:8083
         # 默认 8719 端口，假如被占用会自动从 8719 开始依次 +1 扫描,直至找到未被占用的端口
-        port: 8719
+        port: 8083
       # nacos配置持久化
       datasource:
         ds1:
           nacos:
-            server-addr: 127.0.0.1:8848
+            server-addr: 192.168.142.128:8848
             dataId: sentinel-pmhub-gateway
             groupId: DEFAULT_GROUP
             data-type: json

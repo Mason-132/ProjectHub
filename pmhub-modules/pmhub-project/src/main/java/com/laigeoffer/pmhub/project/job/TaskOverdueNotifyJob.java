@@ -4,6 +4,10 @@ import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
 import com.baomidou.mybatisplus.core.toolkit.Wrappers;
 import com.laigeoffer.pmhub.base.core.enums.ProjectStatusEnum;
 import com.laigeoffer.pmhub.base.core.utils.StringUtils;
+import com.laigeoffer.pmhub.base.notice.domain.dto.TaskOvertimeRemindDTO;
+import com.laigeoffer.pmhub.base.notice.utils.OAUtils;
+import com.laigeoffer.pmhub.base.notice.utils.RocketMqUtils;
+import com.laigeoffer.pmhub.base.notice.utils.SsoUrlUtils;
 import com.laigeoffer.pmhub.project.domain.ProjectTaskNotify;
 import com.laigeoffer.pmhub.project.domain.vo.project.task.TaskNotifyDTO;
 import com.laigeoffer.pmhub.project.mapper.ProjectTaskMapper;
@@ -14,10 +18,16 @@ import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Component;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.net.URLEncoder;
 import java.time.LocalDate;
 import java.time.ZoneId;
 import java.time.temporal.ChronoUnit;
+import java.util.Collections;
 import java.util.List;
+
+import static com.laigeoffer.pmhub.base.notice.utils.MessageUtils.*;
+import static com.laigeoffer.pmhub.base.notice.utils.OAUtils.host;
+import static com.laigeoffer.pmhub.base.notice.utils.OAUtils.ssoPath;
 
 
 /**

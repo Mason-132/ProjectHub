@@ -18,6 +18,7 @@ import java.util.List;
  * @description 用户服务
  * @create 2024-04-24-22:38
  */
+
 @FeignClient(contextId = "userFeignService", value = ServiceNameConstants.SYSTEM_SERVICE, fallbackFactory = UserFeginFallbackFactory.class)
 public interface UserFeignService {
 

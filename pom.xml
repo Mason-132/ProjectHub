@@ -9,7 +9,7 @@
     <version>0.0.1</version>
 
     <name>pmhub</name>
-    <description>🔥热门推荐🔥大学春招、秋招、应届项目，SpringCloud + SpringCloud Alibaba + RocketMQ等技术架构，完成项目管理+BPM流程管理+AI智能项目，帮助学生主打就业的项目。</description>
+    <description>微服务项目</description>
 
     <modules>
         <module>pmhub-gateway</module>
@@ -206,12 +206,13 @@
                 <version>${fastjson.version}</version>
             </dependency>
 
-            <!-- FastDFS 分布式文件系统 -->
-            <dependency>
-                <groupId>com.github.tobato</groupId>
-                <artifactId>fastdfs-client</artifactId>
-                <version>${tobato.version}</version>
-            </dependency>
+<!--            &lt;!&ndash; FastDFS 分布式文件系统 &ndash;&gt;-->
+<!--            <dependency>-->
+<!--                <groupId>com.github.tobato</groupId>-->
+<!--                <artifactId>fastdfs-client</artifactId>-->
+<!--                <version>1.26.2</version>-->
+<!--&lt;!&ndash;                <version>${tobato.version}</version>&ndash;&gt;-->
+<!--            </dependency>-->
 
             <!-- Token生成与解析-->
             <dependency>
@@ -324,11 +325,11 @@
                 <version>${laigeoffer.version}</version>
             </dependency>
 
-            <dependency>
-                <groupId>com.laigeoffer.pmhub-cloud</groupId>
-                <artifactId>pmhub-base-framework</artifactId>
-                <version>${laigeoffer.version}</version>
-            </dependency>
+<!--            <dependency>-->
+<!--                <groupId>com.laigeoffer.pmhub-cloud</groupId>-->
+<!--                <artifactId>pmhub-base-framework</artifactId>-->
+<!--                <version>${laigeoffer.version}</version>-->
+<!--            </dependency>-->
 
             <dependency>
                 <groupId>com.laigeoffer.pmhub-cloud</groupId>
@@ -367,14 +368,12 @@
     </dependencies>
 
 
-
-
-
     <build>
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.14.0</version>
                 <configuration>
                     <source>${java.version}</source>
                     <target>${java.version}</target>
